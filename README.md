@@ -83,3 +83,4 @@ Data Augmentation Techniques
 Model Evaluation
 Model Deployment using Streamlit
 End-to-End ML Pipeline Development
+<img width="6000" height="5400" alt="confusion_matrix_full" src="https://github.com/user-attachments/assets/d333e450-d483-4a25-9002-4044652c7a18" />
