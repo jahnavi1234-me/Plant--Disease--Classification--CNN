@@ -84,3 +84,6 @@ Model Evaluation
 Model Deployment using Streamlit
 End-to-End ML Pipeline Development
 <img width="6000" height="5400" alt="confusion_matrix_full" src="https://github.com/user-attachments/assets/d333e450-d483-4a25-9002-4044652c7a18" />
+<img width="3600" height="3000" alt="confusion_matrix_top20" src="https://github.com/user-attachments/assets/18462ebf-f284-48d0-9a0d-8c92713c5484" />
+<img width="1920" height="1080" alt="demo" src="https://github.com/user-attachments/assets/a08dbb5c-acb4-40f0-b924-0f1919036b46" />
+<img width="1920" height="1080" alt="prediction_output" src="https://github.com/user-attachments/assets/2a7faede-9d0f-43b5-8419-799384f6c168" />
