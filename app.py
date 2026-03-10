@@ -3,6 +3,24 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import json
+import requests
+
+# Ensure models folder exists
+os.makedirs("models", exist_ok=True)
+
+# URLs to download the model and class names
+MODEL_URL = "https://your-cloud-link/cnn_model.keras"
+CLASS_NAMES_URL = "https://your-cloud-link/class_names.json"
+
+# Download model if missing
+if not os.path.exists(MODEL_PATH):
+    with open(MODEL_PATH, "wb") as f:
+        f.write(requests.get(MODEL_URL).content)
+
+# Download class names if missing
+if not os.path.exists(CLASS_NAMES_PATH):
+    with open(CLASS_NAMES_PATH, "wb") as f:
+        f.write(requests.get(CLASS_NAMES_URL).content)
 
 MODEL_PATH = "models/cnn_model.keras"
 CLASS_NAMES_PATH = "models/class_names.json"
