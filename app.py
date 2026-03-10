@@ -6,6 +6,7 @@ import json
 import requests
 
 # Ensure models folder exists
+MODEL_DIR = "/tmp/models"
 os.makedirs("models", exist_ok=True)
 
 # URLs to download the model and class names
