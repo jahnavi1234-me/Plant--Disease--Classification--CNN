@@ -27,8 +27,7 @@ if not os.path.exists(MODEL_PATH):
 if not os.path.exists(CLASS_NAMES_PATH):
     with open(CLASS_NAMES_PATH, "wb") as f:
         f.write(requests.get(CLASS_NAMES_URL).content)
-
- @st.cache_resource
+@st.cache_resource
 def load_model():
     return tf.keras.models.load_model(MODEL_PATH)
 
