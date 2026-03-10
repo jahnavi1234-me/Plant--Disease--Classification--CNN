@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import json
 import requests
+import os
 
 # Ensure models folder exists
 MODEL_DIR = "/tmp/models"
