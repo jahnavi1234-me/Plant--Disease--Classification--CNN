@@ -16,8 +16,8 @@ CLASS_NAMES_PATH = os.path.join(MODEL_DIR, "class_names.json")
 IMG_SIZE = (224, 224)
 
 # URLs to download your files (replace with your real links)
-MODEL_URL = "https://your-cloud-link/cnn_model.keras"
-CLASS_NAMES_URL = "https://your-cloud-link/class_names.json"
+MODEL_URL = "https://github.com/jahnavi1234-me/Plant--Disease--Classification--CNN/raw/1c4954e07526b24aafa9eba5af42e1f0def5ff4b/cnn_model.keras"
+CLASS_NAMES_URL = "https://raw.githubusercontent.com/jahnavi1234-me/Plant--Disease--Classification--CNN/1c4954e07526b24aafa9eba5af42e1f0def5ff4b/class_names.json"
 
 # Download model if missing
 if not os.path.exists(MODEL_PATH):
