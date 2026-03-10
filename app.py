@@ -6,10 +6,15 @@ import json
 import requests
 
 # Ensure models folder exists
-MODEL_DIR = "/tmp/models"
-os.makedirs("models", exist_ok=True)
+ MODEL_DIR = "/tmp/models"
+os.makedirs(MODEL_DIR, exist_ok=True)
 
-# URLs to download the model and class names
+# Paths for model and class names
+MODEL_PATH = os.path.join(MODEL_DIR, "cnn_model.keras")
+CLASS_NAMES_PATH = os.path.join(MODEL_DIR, "class_names.json")
+IMG_SIZE = (224, 224)
+
+# URLs to download your files (replace with your real links)
 MODEL_URL = "https://your-cloud-link/cnn_model.keras"
 CLASS_NAMES_URL = "https://your-cloud-link/class_names.json"
 
@@ -23,11 +28,7 @@ if not os.path.exists(CLASS_NAMES_PATH):
     with open(CLASS_NAMES_PATH, "wb") as f:
         f.write(requests.get(CLASS_NAMES_URL).content)
 
-MODEL_PATH = "models/cnn_model.keras"
-CLASS_NAMES_PATH = "models/class_names.json"
-IMG_SIZE = (224, 224)
-
-@st.cache_resource
+ @st.cache_resource
 def load_model():
     return tf.keras.models.load_model(MODEL_PATH)
 
