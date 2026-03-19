@@ -31,7 +31,9 @@ Displays predicted class with confidence score
 
 Includes model evaluation using confusion matrix and classification report
 
+<img width="6000" height="5400" alt="confusion_matrix_full" src="https://github.com/user-attachments/assets/8062d4da-9f04-4abc-87f7-8238b285317a" />
 
+<img width="3600" height="3000" alt="confusion_matrix_top20" src="https://github.com/user-attachments/assets/1e634623-582c-4556-a54a-54bfe1ad6cde" />
 
 ---
 
@@ -142,11 +144,13 @@ streamlit run app/app.py
 
  Example Output
 
-Predicted Disease: Tomato Early Blight
-Confidence Score: 0.87
+Predicted Disease: strawberry_rotten
+Confidence Score: 0.47
 
-The system takes a leaf image as input and outputs the predicted disease class along with a confidence score.
+The system takes a leaf  or fruit or vegetable image as input and outputs the predicted disease class along with a confidence score.
 
+<img width="1920" height="1080" alt="demo" src="https://github.com/user-attachments/assets/b27d470e-b2ca-49af-8a44-380574aa86f7" />
+<img width="1920" height="1080" alt="prediction_output" src="https://github.com/user-attachments/assets/c6927598-68ce-4c37-a989-c702ffeba80d" />
 
 ---
 
