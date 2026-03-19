@@ -174,4 +174,4 @@ Aspiring Generative AI Engineer
 
 ---
 
-If you want, I can next make this even stronger with GitHub badges + demo section, which makes recruiters notice your project immediately 🔥
+ 
