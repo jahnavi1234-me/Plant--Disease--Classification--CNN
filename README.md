@@ -1,109 +1,173 @@
- Multi-Class Image Classification System (134 Classes)
-
  
+
+ AI-Powered Plant Disease Detection using CNN
+
  Project Description
 
-This project is a deep learning–based image classification system that can classify images into 134 different categories. It uses a Convolutional Neural Network (CNN) with transfer learning to achieve efficient and accurate predictions. The model is deployed using a Streamlit web application for real-time image classification.
+This project is a deep learning-based application designed to automatically detect plant diseases from leaf images. It uses a Convolutional Neural Network (CNN) with transfer learning to classify plant leaf images into 134 different disease categories. The system is deployed using a Streamlit web application, allowing users to upload images and receive real-time predictions.
 
- Problem Statement
 
-Classifying images into multiple categories is a challenging task, especially when the number of classes is large. This project aims to build a scalable and efficient model that can accurately classify images into 134 classes and make it accessible through a simple web interface.
+---
+
+ Project Statement
+
+Plant diseases significantly impact agricultural productivity and crop quality. Traditional disease identification methods rely on manual inspection, which can be time-consuming, error-prone, and dependent on expert knowledge. This becomes increasingly challenging when dealing with a large number of disease categories with similar visual patterns.
+This project aims to develop an automated deep learning-based system capable of accurately classifying plant leaf images into 134 disease categories, enabling faster and more reliable disease detection.
+
+
+---
 
  Features
 
-Multi-class classification (134 categories)
-Transfer learning using MobileNetV2
-Data augmentation for better generalization
-Real-time prediction via web app
-Displays predicted class with confidence score
-Model evaluation using confusion matrix
+Classifies plant leaf images into 134 disease categories
 
-Technologies Used
+Uses MobileNetV2 transfer learning for efficient training
+
+Applies data augmentation to improve model generalization
+
+Provides real-time predictions through a Streamlit web app
+
+Displays predicted class with confidence score
+
+Includes model evaluation using confusion matrix and classification report
+
+
+
+---
+
+ Technologies Used
 
 Python
 TensorFlow / Keras
 NumPy
-Matplotlib
-Pillow
+OpenCV / PIL
+Matplotlib / Seaborn
+Scikit-learn
 Streamlit
+
+
+---
 
  Project Architecture
 
-Data Preprocessing
-Images resized to 224×224
-Pixel normalization (0–1 scaling)
-Data augmentation (rotation, zoom, flip)
-Model
-Pretrained MobileNetV2 (feature extractor)
-Frozen base layers
-Custom layers:
-GlobalAveragePooling
-Dense (256, ReLU)
-Dropout (0.5)
-Output layer (Softmax for 134 classes)
-Training
-Optimizer: Adam (learning rate = 0.0001)
-Loss: Categorical Crossentropy
-Callbacks: EarlyStopping, ModelCheckpoint
-Deployment
-Streamlit web app for user interaction
- Folder Structure
+Data Collection → Data Preprocessing → Model Building → Training → Evaluation → Deployment
+
+1. Data Collection
+   - Plant leaf image dataset with 134 classes
+
+2. Data Preprocessing
+   - Image resizing (224x224)
+   - Normalization
+   - Data augmentation
+
+3. Model Building
+   - MobileNetV2 (pre-trained)
+   - Custom dense layers + dropout
+
+4. Training
+   - Optimizer: Adam
+   - Loss: Categorical Crossentropy
+
+5. Evaluation
+   - Classification report
+   - Confusion matrix
+   - Top confused classes analysis
+
+6. Deployment
+   - Streamlit web application
+   - Real-time image prediction
+
+
+---
 ```
+ Folder Structure
+
 CNN_PROJECT/
-│
+
 ├── data/
 │   ├── raw/
-│   └── processed/
-│       ├── train/
-│       ├── val/
-│       └── test/
-│
+│   ├── processed/
+
 ├── models/
 │   ├── cnn_model.keras
 │   ├── best_model.keras
-│   └── class_names.json
-│
-├── notebook/
-│
-├── train.py
-├── split.py
-├── predict.py
-├── evaluate.py
-├── app.py
+│   ├── class_names.json
+│   ├── confusion_matrix_full.png
+│   ├── confusion_matrix_top20.png
+│   ├── evaluation_report.txt
+
+├── src/
+│   ├── train_data.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   ├── load_data.py
+
+├── app/
+│   └── app.py
+
+├── outputs/
+│   └── sample_images/
+
 ├── requirements.txt
 └── README.md
-```
 
- Installation
- 
-git clone https://github.com/your-username/cnn-134-class-image-classifier.git
-cd cnn-134-class-image-classifier
+
+---
+```
+Installation
+
+Clone the repository and install dependencies using pip install -r requirements.txt.
+
+
+---
+
+ How to Run
+
+# Install dependencies
 pip install -r requirements.txt
-- How to Run
-Train Model
- 
-python train.py
-Run Web App
- 
-streamlit run app.py
- 
+
+# Train the model
+python src/train_data.py
+
+# Evaluate the model
+python src/evaluate.py
+
+# Run prediction script
+python src/predict.py
+
+# Launch Streamlit app
+streamlit run app/app.py
+
+---
+
  Example Output
 
-Input: Uploaded image
-Output:
-Predicted Class: Rice Brown Spot
-Confidence Score: 0.36
+Predicted Disease: Tomato Early Blight
+Confidence Score: 0.87
+
+The system takes a leaf image as input and outputs the predicted disease class along with a confidence score.
+
+
+---
 
  Future Improvements
 
-Apply fine-tuning on pretrained layers
-Use advanced models like EfficientNet
-Improve dataset quality and balance
-Deploy on cloud (AWS / GCP)
-Add top-3 predictions for better usability
+Train the model using GPU for higher accuracy
+Fine-tune upper layers of MobileNetV2
+Use advanced architectures like EfficientNet or ResNet
+Add Top-3 predictions visualization
+Deploy on cloud platforms such as Streamlit Cloud or Hugging Face Spaces
+
+
+---
 
  Author
 
 Jahnavi Besabathini
-B.Tech CSE (AI & ML)
 Aspiring Generative AI Engineer
+ 
+
+
+---
+
+If you want, I can next make this even stronger with GitHub badges + demo section, which makes recruiters notice your project immediately 🔥
